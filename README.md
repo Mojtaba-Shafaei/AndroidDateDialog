@@ -9,6 +9,7 @@ DateDialog.newBuilder(MainActivity.this)
               public void onDateSelect(MyDate date) {
                 Log.d("MAIN_ACTIVITY", "onDateSelect: " + date.getDate());
                 Log.d("MAIN_ACTIVITY", "onDateSelect: " + date.getHumanDate());
+                Log.d("MAIN_ACTIVITY", "onDateSelect: " + date.getNumericDate());
               }
             })
             .withNegativeButton("CANCEL", new OnClickListener() {
@@ -17,11 +18,11 @@ DateDialog.newBuilder(MainActivity.this)
                 Log.d("MAIN_ACTIVITY", "onClick:canceled ");
               }
             })
-            .withMode(DateMode.SHORT_MODE)
+            .withMode(DateMode.LONG)
             .withCancelable(false)
+            .withDefaultDate(new MyDate(1390, 1, 1))
             .build()
             .show();
-      }
 ```
 
 ## Installation    
