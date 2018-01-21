@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:background="@drawable/bg_dialog"
+  android:orientation="vertical">
+
+  <TextView
+    android:id="@+id/tv_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_gravity="right"
+    android:gravity="center_vertical"
+    android:text="@string/select_date"
+    android:textColor="@android:color/holo_blue_dark"
+    android:textSize="16sp"/>
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:orientation="horizontal">
+
+    <com.mojtaba_shafaei.android.MyNumberPicker
+      android:id="@+id/year_picker"
+      android:layout_width="75dp"
+      android:layout_height="150dp"
+      android:orientation="vertical"
+      android:solidColor="#1FFFFFFF"/>
+
+    <android.support.v4.widget.Space
+      android:layout_width="4dp"
+      android:layout_height="match_parent"/>
+
+    <com.mojtaba_shafaei.android.MyNumberPicker
+      android:id="@+id/month_picker"
+      android:layout_width="100dp"
+      android:layout_height="150dp"
+      android:orientation="vertical"
+      android:solidColor="#1FFFFFFF"/>
+
+    <android.support.v4.widget.Space
+      android:layout_width="4dp"
+      android:layout_height="match_parent"/>
+
+    <com.mojtaba_shafaei.android.MyNumberPicker
+      android:id="@+id/dayPicker"
+      android:layout_width="50dp"
+      android:layout_height="150dp"
+      android:orientation="vertical"
+      android:solidColor="#1FFFFFFF"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:layout_marginTop="20dp"
+    android:layout_gravity="center_vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.AppCompatButton
+      android:id="@+id/btn_select"
+      android:layout_width="88dp"
+      android:layout_height="36dp"
+      android:layout_gravity="left|center_vertical"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:background="@android:color/holo_blue_dark"
+      android:gravity="center"
+      android:minWidth="88dp"
+      android:text="@string/select"
+      android:textColor="@android:color/white"
+      android:textSize="@dimen/text_size_normal"/>
+
+    <android.support.v4.widget.Space
+      android:layout_width="8dp"
+      android:layout_height="8dp"/>
+
+    <android.support.v7.widget.AppCompatButton
+      android:id="@+id/btn_cancel"
+      android:layout_width="wrap_content"
+      android:layout_height="36dp"
+      android:layout_gravity="left|center_vertical"
+      android:background="@null"
+      android:gravity="center"
+      android:minWidth="88dp"
+      android:text="@string/cancel"
+      android:textAllCaps="true"
+      android:textColor="@android:color/primary_text_light"
+      android:textSize="@dimen/text_size_normal"/>
+
+  </LinearLayout>
+</LinearLayout>
