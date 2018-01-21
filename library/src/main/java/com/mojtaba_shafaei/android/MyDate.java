@@ -116,7 +116,7 @@ public class MyDate {
     }
   }
 
-  public int getNumberDate() {
+  public int getNumericDate() {
     Integer d = this.day;
     if (this.day == null) {
       d = 1;

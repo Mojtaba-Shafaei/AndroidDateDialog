@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
               public void onDateSelect(MyDate date) {
                 Log.d("MAIN_ACTIVITY", "onDateSelect: " + date.getDate());
                 Log.d("MAIN_ACTIVITY", "onDateSelect: " + date.getHumanDate());
+                Log.d("MAIN_ACTIVITY", "onDateSelect: " + date.getNumericDate());
               }
             })
             .withNegativeButton("CANCEL", new OnClickListener() {
@@ -34,8 +35,9 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("MAIN_ACTIVITY", "onClick:canceled ");
               }
             })
-            .withMode(DateMode.SHORT_MODE)
+            .withMode(DateMode.LONG)
             .withCancelable(false)
+            .withDefaultDate(new MyDate(1390, 1, 1))
             .build()
             .show();
       }

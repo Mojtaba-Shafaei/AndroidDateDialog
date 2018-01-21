@@ -1,6 +1,6 @@
 package com.mojtaba_shafaei.android;
 
-import static com.mojtaba_shafaei.android.DateMode.SHORT_MODE;
+import static com.mojtaba_shafaei.android.DateMode.SHORT;
 
 import android.content.Context;
 import android.mojtaba_shafaei.com.library.R;
@@ -70,7 +70,7 @@ public class DateDialog extends AlertDialog implements OnClickListener {
         day.setValue(currentDay);
       }
 
-      if (params.mode == SHORT_MODE) {
+      if (params.mode == SHORT) {
         day.setVisibility(View.GONE);
       }
 
@@ -84,7 +84,7 @@ public class DateDialog extends AlertDialog implements OnClickListener {
     if (v.getId() == R.id.btn_select) {
       MyDate date = new MyDate(year.getValue()
           , month.getValue()
-          , SHORT_MODE == params.mode ? null : day.getValue());
+          , SHORT == params.mode ? null : day.getValue());
 
       if (params.positiveButtonListener != null) {
         params.positiveButtonListener.onDateSelect(date);
@@ -183,6 +183,11 @@ public class DateDialog extends AlertDialog implements OnClickListener {
 
     public Builder withMode(@DateMode int mode) {
       p.mode = mode;
+      return this;
+    }
+
+    public Builder withDefaultDate(MyDate defaultDate) {
+      p.defaultDate = defaultDate;
       return this;
     }
 

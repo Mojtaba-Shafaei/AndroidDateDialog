@@ -9,10 +9,10 @@ import java.lang.annotation.RetentionPolicy;
  */
 
 @Retention(RetentionPolicy.SOURCE)
-@IntDef({DateMode.LONG_MODE, DateMode.SHORT_MODE})
+@IntDef({DateMode.LONG, DateMode.SHORT})
 public @interface DateMode {
 
-  int LONG_MODE = 0;
-  int SHORT_MODE = 1;
+  int LONG = 0;
+  int SHORT = 1;
 
 }
