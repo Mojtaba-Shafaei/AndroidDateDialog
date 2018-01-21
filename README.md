@@ -23,3 +23,6 @@ DateDialog.newBuilder(MainActivity.this)
             .show();
       }
 ```
+
+## Installation    
+[![](https://jitpack.io/v/Mojtaba-Shafaei/AndroidDateDialog.svg)](https://jitpack.io/#Mojtaba-Shafaei/AndroidDateDialog)
