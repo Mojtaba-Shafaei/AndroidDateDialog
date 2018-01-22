@@ -1,4 +1,4 @@
-package com.mojtaba_shafaei.dateDialog;
+package com.mojtaba_shafaei.android.dateDialog;
 
 import android.app.Dialog;
 import android.graphics.Color;

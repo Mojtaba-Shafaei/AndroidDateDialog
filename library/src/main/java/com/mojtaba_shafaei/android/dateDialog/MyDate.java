@@ -1,4 +1,4 @@
-package com.mojtaba_shafaei.dateDialog;
+package com.mojtaba_shafaei.android.dateDialog;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;

@@ -1,6 +1,4 @@
-package com.mojtaba_shafaei.dateDialog;
-
-import static com.mojtaba_shafaei.dateDialog.DateMode.SHORT;
+package com.mojtaba_shafaei.android.dateDialog;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -13,9 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
-import com.mojtaba_shafaei.dateDialog.calendar.CivilDate;
-import com.mojtaba_shafaei.dateDialog.calendar.DateConverter;
-import com.mojtaba_shafaei.dateDialog.calendar.PersianDate;
+import com.mojtaba_shafaei.android.dateDialog.calendar.CivilDate;
+import com.mojtaba_shafaei.android.dateDialog.calendar.DateConverter;
+import com.mojtaba_shafaei.android.dateDialog.calendar.PersianDate;
 
 /**
  * Created by mojtaba on 5/9/16.
@@ -74,7 +72,7 @@ public class DateDialog extends AlertDialog implements OnClickListener {
         day.setValue(currentDay);
       }
 
-      if (params.mode == SHORT) {
+      if (params.mode == DateMode.SHORT) {
         day.setVisibility(View.GONE);
       }
 
@@ -88,7 +86,7 @@ public class DateDialog extends AlertDialog implements OnClickListener {
     if (v.getId() == R.id.btn_select) {
       MyDate date = new MyDate(year.getValue()
           , month.getValue()
-          , SHORT == params.mode ? null : day.getValue());
+          , DateMode.SHORT == params.mode ? null : day.getValue());
 
       if (params.positiveButtonListener != null) {
         params.positiveButtonListener.onDateSelect(date);

@@ -6,10 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.mojtaba_shafaei.dateDialog.DateDialog;
-import com.mojtaba_shafaei.dateDialog.DateMode;
-import com.mojtaba_shafaei.dateDialog.MyDate;
-import com.mojtaba_shafaei.dateDialog.OnDateSelectListener;
+import com.mojtaba_shafaei.android.dateDialog.DateDialog;
+import com.mojtaba_shafaei.android.dateDialog.DateMode;
+import com.mojtaba_shafaei.android.dateDialog.MyDate;
+import com.mojtaba_shafaei.android.dateDialog.OnDateSelectListener;
 import com.mojtaba_shafaei.persianFont.PersianFont;
 
 public class MainActivity extends AppCompatActivity {
