@@ -3,6 +3,7 @@ package com.mojtaba_shafaei.android;
 import static com.mojtaba_shafaei.android.DateMode.SHORT;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.mojtaba_shafaei.com.library.R;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
@@ -11,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
 import com.mojtaba_shafaei.android.calendar.CivilDate;
 import com.mojtaba_shafaei.android.calendar.DateConverter;
 import com.mojtaba_shafaei.android.calendar.PersianDate;
@@ -24,6 +26,8 @@ public class DateDialog extends AlertDialog implements OnClickListener {
   private final String TAG = "DateDialog";
 
   private MyNumberPicker year, month, day;
+  private TextView title;
+
   private Params params;
 
   /*********************************************/
@@ -107,6 +111,11 @@ public class DateDialog extends AlertDialog implements OnClickListener {
     month = root.findViewById(R.id.month_picker);
     day = root.findViewById(R.id.dayPicker);
 
+    title = root.findViewById(R.id.tv_title);
+    if (params.title != null) {
+      title.setText(params.title);
+    }
+
     AppCompatButton positiveButton = root.findViewById(R.id.btn_select);
     if (params.positiveButtonTitle != null) {
       positiveButton.setText(params.positiveButtonTitle);
@@ -118,6 +127,14 @@ public class DateDialog extends AlertDialog implements OnClickListener {
     if (params.negativeButtonTitle != null) {
       negativeButton.setText(params.negativeButtonTitle);
     }
+
+    if (params.defaultTypeface != null) {
+      title.setTypeface(params.defaultTypeface);
+
+      positiveButton.setTypeface(params.defaultTypeface);
+      negativeButton.setTypeface(params.defaultTypeface);
+    }
+
     setCancelable(params.cancelable);
     setView(root);
     onCreated();
@@ -127,12 +144,13 @@ public class DateDialog extends AlertDialog implements OnClickListener {
 
   private static final class Params {
 
-    private CharSequence title, message;
+    private CharSequence title = null, message = null;
     private CharSequence positiveButtonTitle;
     private OnDateSelectListener positiveButtonListener;
     private CharSequence negativeButtonTitle;
     private View.OnClickListener negativeButtonListener;
     private boolean cancelable = true;
+    private Typeface defaultTypeface = null;
 
     private MyDate defaultDate;
     private @DateMode
@@ -188,6 +206,11 @@ public class DateDialog extends AlertDialog implements OnClickListener {
 
     public Builder withDefaultDate(MyDate defaultDate) {
       p.defaultDate = defaultDate;
+      return this;
+    }
+
+    public Builder withDefaultTypeface(Typeface defaultTypeface) {
+      p.defaultTypeface = defaultTypeface;
       return this;
     }
 

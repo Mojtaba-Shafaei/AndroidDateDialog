@@ -3,7 +3,7 @@
 
 ## Sample code
 ```java
-DateDialog.newBuilder(MainActivity.this)
+        DateDialog.newBuilder(getContext())
             .withPositiveButton("OK", new OnDateSelectListener() {
               @Override
               public void onDateSelect(MyDate date) {
@@ -21,6 +21,7 @@ DateDialog.newBuilder(MainActivity.this)
             .withMode(DateMode.LONG)
             .withCancelable(false)
             .withDefaultDate(new MyDate(1390, 1, 1))
+            .withDefaultTypeface(PersianFont.IRANSANS_BOLD(getContext()))
             .build()
             .show();
 ```
