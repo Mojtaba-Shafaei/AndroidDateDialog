@@ -2,7 +2,6 @@ package com.mojtaba_shafaei.android.dateDialog;
 
 import android.content.Context;
 import android.graphics.Typeface;
-import android.mojtaba_shafaei.com.library.R;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.AppCompatButton;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 import com.mojtaba_shafaei.android.dateDialog.calendar.CivilDate;
 import com.mojtaba_shafaei.android.dateDialog.calendar.DateConverter;
 import com.mojtaba_shafaei.android.dateDialog.calendar.PersianDate;
+import com.mojtaba_shafaei.android.library.R;
 
 /**
  * Created by mojtaba on 5/9/16.

@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.mojtaba_shafaei'
+group='com.github.Mojtaba-Shafaei'
 android {
     compileSdkVersion rootProject.compileSdkVersion
 
